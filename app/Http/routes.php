@@ -13,35 +13,36 @@
 
 use Illuminate\Support\Facades\Mail;
 
-Route::get('/', function()
+Route::get('/', ['as' => 'home',function()
 {
 	return view('home');
-});
-Route::get('/home', function(){
+}]);
+Route::get('/home', ['as' => 'home',function()
+{
 	return view('home');
-});
+}]);
 Route::get('/contact', function()
 {
 	return view('contact');
 });
 
-Route::get('/Parcours', function()
+Route::get('/Parcours',['as' => 'parcours', function()
 {
 	return view('parcours');
-});
+}]);
 
 Route::get('/Realisations', ['as' => 'realisations',
 														 'uses' => 'ProjetsController@index']);
 
-Route::get('/CV', function()
+Route::get('/CV', ['as' =>'cv', function()
 {
 	return view('cv');
-});
+}]);
 
-Route::get('/backoffice', function()
+Route::get('/backoffice', ['as' => 'backoffice', function()
 {
 	return view('backoffice');
-});
+}]);
 Route::get('/connected', function()
 {
 	return view('connected');
@@ -80,6 +81,6 @@ Route::group([
 		Route::resource('editprojet','ProjetsController');
 		Route::post('/store', ['as' => 'backoffice.store','uses'=>'ProjetsController@edit']);
 		});
-		Route::post('/email', ['uses'=>'mailController@send', function(){
+		Route::post('/email', ['as' => 'email', 'uses'=>'mailController@send', function(){
 		}]);
 		Route::get('/pdf/{order}', ['as' => 'order.pdf', 'uses' => 'PdfController@orderPdf']);

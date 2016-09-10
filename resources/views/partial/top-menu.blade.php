@@ -7,9 +7,9 @@
             </div>
             <div id="navbar-main" class="navbar-collapse  collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="/Parcours">Parcours</a></li>
-                    <li><a href="/Realisations">Realisations</a></li>
-                    <li><a href="/CV">CV</a></li>
+                    <li><a href="{{ route('parcours') }}">Parcours</a></li>
+                    <li><a href="{{ route('realisations') }}">Realisations</a></li>
+                    <li><a href="{{ route('cv') }}">CV</a></li>
                     @if (Auth::guest())
                         <li><a href="{{ url('/login') }}">Login</a></li>
                         <li><a href="{{ url('/register') }}">Register</a></li>
@@ -23,7 +23,7 @@
                                 <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
                             </ul>
                         </li>
-                        <li><a href="/backoffice">Administration</a></li>
+                        <li><a href="{{route('backoffice')}}">Administration</a></li>
                     @endif
                 </ul>
                 <button type="button" id="contact" class="btn" data-toggle="modal" data-target="#myModal">
