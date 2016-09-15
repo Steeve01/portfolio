@@ -2,7 +2,7 @@
     <div class="container">
         <div class="col-lg-12 modal fade" id="myModal">
             <div class="well bs-component modal-dialog" role="document">
-                <form class="form-horizontal mondal-content" action="/email" method="post">
+                <form class="form-horizontal mondal-content" role="form" action="email" method="post">
                     <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
                     <fieldset>
                         <legend>Contactez moi : </legend>
@@ -42,7 +42,7 @@
                         </div>
                         <div class="modal-footer">
                           <button type="submit" class="btn btn-secondary">Envoyer</button>
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
                         </div>
                     </fieldset>
                 </form>

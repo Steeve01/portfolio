@@ -19,11 +19,12 @@
     <script src="{{asset('js/jquery-2.2.4.min.js')}}"
             integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
             crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
     <script src="{{asset('js/url.min.js')}}"></script>
     <script src="{{asset('js/main.js')}}"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
     <script>
       $( function() {
         $( ".datecrea" ).datepicker({dateFormat: "yy-mm-dd"});

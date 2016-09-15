@@ -162,7 +162,7 @@ footer{
 }
 
 footer div{
-    margin-top:1.5%;
+    margin-top:1%;
 }
 
 @media(max-width:640px){
@@ -176,7 +176,7 @@ footer div{
     margin-bottom:5%;
   }
   footer div{
-    margin-top:5%;
+    margin-top:3.5%;
     padding-right:0!important;
   }
   .navbar-toggle{

@@ -39,7 +39,7 @@ Route::get('/CV', ['as' =>'cv', function()
 	return view('cv');
 }]);
 
-Route::get('/backoffice', ['as' => 'backoffice', function()
+Route::get('/backoffice', ['as' => 'backoffice', 'uses' => 'HomeController@index', function()
 {
 	return view('backoffice');
 }]);
@@ -49,7 +49,6 @@ Route::get('/connected', function()
 });
 Route::auth();
 
-Route::get('/backoffice', 'HomeController@index');
 
 Route::group([
   'prefix' => 'backoffice'], function(){
@@ -83,4 +82,3 @@ Route::group([
 		});
 		Route::post('/email', ['as' => 'email', 'uses'=>'mailController@send', function(){
 		}]);
-		Route::get('/pdf/{order}', ['as' => 'order.pdf', 'uses' => 'PdfController@orderPdf']);

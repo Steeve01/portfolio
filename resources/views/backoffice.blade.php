@@ -7,6 +7,15 @@
       <a class="list-group-item" href="backoffice/supprimer">Supprimer un projet</a>
     </div>
   </div>
+
+    <script type="text/javascript">
+        if($.url("query").split("=")[3]=='no'){
+            $('.noAdmin').css({
+              'display':'block'
+            });
+          }
+
+    </script>
   <div class="noAdmin col-lg-7 alert alert-dismissible alert-danger">
     <button class="close" data-dismiss="alert" type="button">×</button>
     <strong> Vous n'êtes pas autorisé à faire ceci.</strong>
